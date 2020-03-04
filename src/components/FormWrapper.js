@@ -4,11 +4,11 @@ import Show from './Show'
 
 const FormWrapper = props => {
     const [formState, setFormState] = useState({
-        "firstName": "",
-        "lastName": "",
-        "email": "",
-        "password": "",
-        "confirmPassword": "",
+        firstName: "",
+        lastName: "",
+        email: "",
+        password: "",
+        confirmPassword: "",
     })
     const onChangeHandler = (e) => {
         setFormState({
@@ -16,11 +16,9 @@ const FormWrapper = props => {
             [e.target.name]: e.target.value
         })
     }
-    console.log(formState)
-
     return (
-        <div>
-            <Form onChangeHandler={onChangeHandler}/>
+        <div class="col-5 mx-auto">
+            <Form form={formState} onChangeHandler={onChangeHandler}/>
             <Show form={formState}/>
         </div>
     )

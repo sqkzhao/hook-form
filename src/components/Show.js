@@ -2,7 +2,7 @@ import React from 'react'
 
 const Show = ({form}) => {
     return (
-        <div>
+        <div className="card-body">
             <p>Your Form Data</p>
             <p>First Name {form.firstName}</p>
             <p>Last Name {form.lastName}</p>
